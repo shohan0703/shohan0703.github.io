@@ -2,72 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shakib Hasan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakib Hasan | Developer</title>
 
 <style>
-body {
+* {
   margin: 0;
-  font-family: Arial;
-  background: #0f172a;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #020617, #0f172a);
   color: white;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
+  padding: 15px;
   text-align: center;
 }
 
-section {
-  padding: 60px 20px;
+nav a {
+  margin: 0 15px;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
 }
 
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+/* SECTION */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #38bdf8;
+}
+
+/* SKILLS */
 .skills span {
-  background: #1e293b;
-  padding: 10px;
-  margin: 5px;
   display: inline-block;
+  margin: 10px;
+  padding: 10px 15px;
+  background: #1e293b;
   border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #38bdf8;
+  color: black;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: #1e293b;
   padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #334155;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #38bdf8;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<section>
-<h1>Shakib Hasan 👋</h1>
-<p>CSE Student | Developer 🚀</p>
-</section>
+<!-- NAVBAR -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-<section>
-<h2>About</h2>
-<p>I am passionate about programming and development.</p>
-</section>
-
-<section>
-<h2>Skills</h2>
-<div class="skills">
-<span>C++</span>
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
+<!-- HERO -->
+<div class="hero">
+  <h1>Hi, I'm <span>Shakib Hasan</span> 👋</h1>
+  <p>CSE Student | Future Developer 🚀</p>
 </div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am passionate about programming, web development, and building modern applications.</p>
 </section>
 
-<section>
-<h2>Projects</h2>
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>My first website</p>
-</div>
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>C++</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>WordPress</span>
+  </div>
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: contact@shakibhasan.me</p>
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio hosted on GitHub Pages.</p>
+    </div>
+
+    <div class="card">
+      <h3>C++ Project</h3>
+      <p>Transaction management system.</p>
+    </div>
+  </div>
 </section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: contact@shakibhasan.me</p>
+  <a href="#" class="btn">GitHub Profile</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Shakib Hasan</p>
+</footer>
 
 </body>
 </html>
